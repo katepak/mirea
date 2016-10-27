@@ -1,0 +1,6 @@
+Copy your vmlinuz and initrd.gz to isolinux folder
+execute mkisofs command from parent directory:
+
+mkisofs -o myLiveCd.iso -b isolinux.bin -c boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -R -J -v -T isolinux/
+
+insert your live cd to VirtualBox or QEMU (qemu-system-x86_64 -cdrom myLiveCd.iso)
